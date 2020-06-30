@@ -1,0 +1,430 @@
+@import "~bootstrap/scss/bootstrap"
+@import "./fonts"
+@import "./reset"
+
+$enable-responsive-font-sizes: true
+$black: #1A1A1A
+$dark-gray: #252525
+$light-gray: #737373
+$white: #ffffff
+$accent: #34C759
+
+h1
+    +rfs(72)
+    font-weight: 300
+    text-transform: capitalize
+
+h2
+    +rfs(36)
+    font-weight: 300
+
+h3
+    +rfs(32)
+    font-weight: 500
+
+h4
+    +rfs(30)
+    font-weight: 300
+
+
+body
+    +rfs(16)
+    color: $light-gray
+    font-family: 'Poppins', sans-serif
+    background: $black
+    text-transform: capitalize
+
+button
+    background: #34C759
+    border-radius: 43px
+    outline: none!important
+    color: $black
+
+// Screen1
+
+.bg
+    position: absolute
+    right: 0
+    z-index: -1
+    width: 100%
+
+.offer
+    position: relative
+
+.navigation
+    padding: 33px 0px
+    border-bottom: 1px solid $light-gray
+
+.logo
+
+    &__img
+        margin-right: 5px
+
+    &__text
+        color: $accent
+
+.menu-nav
+
+    &__item
+        color: $white
+        +rfs(14)
+        text-decoration: none!important
+
+        &:hover
+            color: $accent
+
+.offer
+    color: $white
+    width: 100%
+    padding-bottom: 160px
+
+    &__title
+        max-width: 911px
+
+        &-wrapper
+            margin: 88px 0px 40px 0px
+
+    &__description
+        max-width: 595px
+
+    &__item
+
+        &-svg
+            margin-bottom: 17px
+
+        &-title
+            margin-bottom: 5px
+            font-weight: 500
+
+        &-desc
+            mix-blend-mode: normal
+            opacity: 0.5
+
+.button__cta
+    width: 100%
+    max-width: 220px
+    height: 72px
+
+.button-wrapper
+    margin-bottom: 70px
+
+// Screen2
+
+.about
+    margin-bottom: 90px
+
+    &__wrapper
+        margin-bottom: 90px
+
+    &__bg
+        padding-top: 106px
+        background: $dark-gray
+        padding-bottom: 90px
+        width: 100%
+        border-radius: 6px
+
+.title
+    margin-bottom: 60px
+    color: $white
+    position: relative
+    z-index: 1
+
+
+    &-bg
+        position: absolute
+        top: -20px
+        left: calc(50% - 351px/2 - 1px)
+
+
+.desc
+    width: 100%
+    max-width: 734px
+    line-height: 30px
+
+.arrow-left
+    margin-right: 60px
+
+.arrow-rigth
+    margin-left: 60px
+
+// Screen3
+
+.work
+    margin-bottom: 90px
+
+    &__title
+        position: relative
+
+        &-bg
+            top: calc(50% - 150px/2)
+
+        &::after
+            content: ''
+            position: absolute
+            width: 60px
+            height: 2px
+            background: $accent
+            left: 50%
+            top: 80px
+            transform: translate(-50%)
+            z-index: 1
+
+    &__item
+        background: $dark-gray
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+        border-radius: 6px
+        width: 100%
+        height: 206px
+        padding: 24px 24px 42px 24px
+
+        &:hover
+            background: $accent
+            color: #000000
+
+
+        &-title
+            +rfs(22)
+            margin-bottom: 36px
+            position: relative
+
+            &::after
+                position: absolute
+                content: ''
+                width: 56px
+                height: 2px
+                left: 0
+                bottom: -10px
+                background: $accent
+
+        // &:hover
+
+        //     &::after
+        //         position: absolute
+        //         content: ''
+        //         width: 56px
+        //         height: 2px
+        //         left: 0
+        //         bottom: -10px
+        //         background: #000
+
+
+        &-desc
+            +rfs(13)
+            text-transform: none
+            max-width: 200px
+
+// Screen4
+
+.dishes
+    margin-bottom: 90px
+
+    &__item
+        width: 100%
+        height: 493px
+        background: $dark-gray
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+        border-radius: 6px
+
+        &-wrapper
+            margin-left: 30px
+
+        &-title
+            color: $white
+
+            &-wrapper
+                margin: 30px 0px 20px 0px
+
+        &-text
+            +rfs(12)
+
+        &-desc
+            +rfs(13)
+            max-width: 290px
+            margin-bottom: 26px
+
+.number
+    margin: 0px 43px 0px 14px
+
+.button__cta-dishes
+    width: 100px
+    height: 40px
+    +rfs(12)
+    font-weight: 700
+    text-transform: uppercase
+    border-radius: 30px
+
+    &-ghost
+        color: $light-gray
+        background: none!important
+        border: 2px solid #303030
+
+
+
+.dishes-row
+    margin-bottom: 30px
+
+// Screen5
+
+.chefs
+    margin-bottom: 90px
+
+
+.profile-info
+    margin-bottom: 24px
+
+    &__name
+        margin-left: 24px
+
+.name
+    margin-bottom: 5px
+    +rfs(18)
+    color: $white
+
+.specialistic
+    +rfs(12)
+
+// Screen6
+
+.recipes
+    margin-bottom: 90px
+
+    &__item
+
+        &-lg
+            background: url('../img/recipes-img1.png')
+            width: 100%
+            height: 510px
+            padding: 12% 16%
+            color: $white
+            position: relative
+
+            &-img
+                position: absolute
+                top: 5%
+                left: 85%
+
+        &-md
+            padding: 30px 5%
+            background: $dark-gray
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+            border-radius: 6px
+            width: 100%
+            height: 150px
+            margin-bottom: 30px
+
+            &:hover
+                background: $accent
+                color: #000000
+
+            &:active
+                background: url('../img/recipes-img2.png')
+
+    &__title-bg
+        position: absolute
+        left: 30%
+        top: calc(50% - 150px/2)
+
+    &__tag-wrapper
+        margin-bottom: 65px
+
+    &__date
+        margin-bottom: 25px
+        +rfs(14)
+
+        &-md
+            +rfs(12)
+
+    &__desc
+        +rfs(24)
+        margin-bottom: 45px
+        line-height: 40px
+        text-transform: none
+
+        &-md
+            line-height: 30px
+            color: $white
+            text-transform: none
+            margin-bottom: 10px
+
+
+    &__tag
+        font-weight: 900
+        letter-spacing: 1.25px
+        text-transform: uppercase
+        +rfs(10)
+        background: #000000
+        opacity: 0.3
+        max-width: 90px
+        padding: 7px 15px
+        color: $white
+        border-radius: 5px
+
+        &-md
+            width: 65px
+            height: 25px
+            margin-right: 15px
+
+    &__chef-name
+        margin-bottom: 60px
+
+.title
+    position: relative
+
+.icon-text
+    +rfs(12)
+    margin-left: 15px
+
+.icon-wrapper-1
+    margin-right: 25px
+
+// Screen7
+
+.social
+    margin-bottom: 90px
+
+    &-item
+        width: 100%
+        max-width: 350px
+        height: 100%
+        border-radius: 6px
+        background: $dark-gray
+        padding: 25px 11% 20px 8%
+        +rfs(14)
+        font-style: normal
+        text-transform: none
+        position: relative
+
+        &__media
+            padding-bottom: 23px
+            border-bottom: 2px solid #303030
+
+        &__text
+
+            &-date
+                margin-top: 20px
+                margin-bottom: 10px
+
+            &-link
+                margin-top: 10px
+                color: $accent
+
+            &-desc
+                color: $white
+                line-height: 30px
+
+.scroll
+    position: absolute
+    top: 35%
+    right: 5%
+
+// Screen8
+
+.footer
+    padding: 30px 0px
+    background: $dark-gray
+
+    &-logo
+        margin-top: 40px
+
+        &__text
+            color: $accent
